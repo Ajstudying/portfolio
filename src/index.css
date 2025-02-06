@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "omyu_pretty";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: -apple-system, system-ui, Arial, sans-serif;
+  }
+
+  html,
+  body {
+    @apply bg-grayscaleF dark:bg-grayscaleA text-grayscaleB dark:text-grayscaleF;
+  }
+
+  main,
+  section {
+    min-height: 100vh;
+  }
+
+  main {
+    @apply relative z-20;
+
+    & > section {
+      @apply relative flex flex-col justify-center w-full py-10 px-3 lg:px-40 lg:pr-10;
+    }
+  }
+
+  h2 {
+    @apply text-4xl font-bold period-mark;
+  }
+
+  h3,
+  h4 {
+    @apply text-2xl font-semibold;
+  }
+
+  h3 {
+    a {
+      @apply inline-flex items-center gap-2;
+    }
+  }
+
+  h5 {
+    @apply text-lg font-semibold;
+  }
+
+  h6 {
+    @apply font-semibold;
+  }
+
+  a:hover,
+  a:active {
+    @apply text-primary;
+  }
+}
+
+@layer components {
+  header.open {
+    @apply w-2/3 left-0;
+  }
+
+  nav {
+    li.selected {
+      & > a {
+        @apply bg-primary text-grayscaleF lg:w-auto lg:px-5;
+
+        & > img {
+          @apply invert;
+        }
+
+        & > span {
+          @apply lg:block;
+        }
+      }
+    }
+  }
+
+  #modal .open > div {
+    @apply w-screen h-screen;
+  }
+
+  .btn-top.scrolled {
+    @apply opacity-80 translate-y-0;
+  }
+
+  .period-mark {
+    @apply after:content-[''] after:inline-block after:w-2 after:h-2 after:rounded-full after:bg-primary after:align-baseline;
+
+    &.small {
+      @apply after:w-1 after:h-1;
+    }
+  }
+
+  .btn-theme-changer {
+    @apply bg-[url('/images/common/icon_dark.png')];
+  }
+
+  .dark .btn-theme-changer {
+    @apply bg-[url('/images/common/icon_light.png')];
+  }
+
+  .a11y-hidden {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    clip-path: circle(0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+  .about-div {
+    @apply flex gap-10 lg:gap-20;
+  }
+  .about-p {
+    @apply font-omyu flex items-center text-grayscaleB text-lg lg:text-2xl;
+  }
+
+  .list-custom li::before {
+    content: "- ";
+    margin-right: 0.5rem; /* 기호와 텍스트 사이의 간격 조정 */
+  }
+}
+
+@layer utilities {
+  .main-swiper {
+    @apply w-full border border-solid border-grayscaleA/10;
+
+    &.swiper-horizontal > .swiper-pagination-progressbar {
+      @apply top-auto bottom-0;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      @apply w-20 h-20 bg-center bg-12 bg-no-repeat text-[1px] text-grayscaleA/0;
+    }
+
+    .swiper-button-prev {
+      @apply left-0 bg-[url('/images/portfolio/icon_arrow_left.png')];
+    }
+
+    .swiper-button-next {
+      @apply right-0 bg-[url('/images/portfolio/icon_arrow_right.png')];
+    }
+
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+      @apply bg-primary;
+    }
+  }
+
+  .thumbs-swiper {
+    @apply mt-2;
+
+    .swiper-slide {
+      @apply p-2 border border-solid border-grayscaleA/10 opacity-25;
+
+      &.swiper-slide-thumb-active {
+        @apply opacity-100;
+      }
+    }
+  }
+}
