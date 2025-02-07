@@ -6,7 +6,7 @@ import InitializeScroll from "./components/InitializeScroll/InitializeScroll";
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio">
       {/* <SkipNavigation /> */}
       <Routes>
         <Route element={<CommonLayout />}>
