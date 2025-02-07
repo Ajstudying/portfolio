@@ -43,7 +43,7 @@ const Skillset = () => {
                   return (
                     <li
                       key={index}
-                      className="relative block font-omyu text-lg lg:text-xl pl-3 lg:pl-6 before:content-[''] before:block before:w-1 lg:before:w-2 before:h-px before:absolute before:top-3 before:left-1 before:bg-[#000]"
+                      className="relative block font-omyu text-lg lg:text-2xl pl-3 lg:pl-6 before:content-[''] before:block before:w-1 lg:before:w-2 before:h-px before:absolute before:top-3 before:left-1 before:bg-[#000]"
                       tabIndex={0}
                     >
                       {item}

@@ -63,7 +63,7 @@ const History = () => {
                   <div className="flex flex-col gap-2">
                     <h4 className="text-xl lg:text-2xl">설명</h4>
                     <span
-                      className="relative block font-omyu text-xl lg:text-2xl pl-3 lg:pl-6 before:content-[''] before:block before:w-1 lg:before:w-3 before:h-px before:absolute before:top-3 before:left-1 before:bg-[#000]"
+                      className="relative block font-omyu text-xl lg:text-2xl pl-3 lg:pl-6 before:content-[''] before:block before:w-1 lg:before:w-2 before:h-px before:absolute before:top-3 before:left-1 before:bg-[#000]"
                       tabIndex={0}
                     >
                       {description}
@@ -80,7 +80,7 @@ const History = () => {
                       {workSummary?.map((item, index) => (
                         <li
                           key={index}
-                          className="relative font-omyu text-xl lg:text-2xl pl-3 lg:pl-6 before:content-[''] before:block before:w-1 lg:before:w-3 before:h-px before:absolute before:top-3 before:left-1 before:bg-[#000]"
+                          className="relative font-omyu text-xl lg:text-2xl pl-3 lg:pl-6 before:content-[''] before:block before:w-1 lg:before:w-2 before:h-px before:absolute before:top-3 before:left-1 before:bg-[#000]"
                           tabIndex={0}
                         >
                           {item}
@@ -96,7 +96,7 @@ const History = () => {
                       기술 스택
                     </h4>
                     <span
-                      className="relative block font-omyu text-xl lg:text-2xl pl-3 lg:pl-6 before:content-[''] before:block before:w-1 lg:before:w-3 before:h-px before:absolute before:top-3 before:left-1 before:bg-[#000]"
+                      className="relative block font-omyu text-xl lg:text-2xl pl-3 lg:pl-6 before:content-[''] before:block before:w-1 lg:before:w-2 before:h-px before:absolute before:top-3 before:left-1 before:bg-[#000]"
                       tabIndex={0}
                     >
                       {techStackSummary}
