@@ -1,7 +1,7 @@
 {
   "result": [
     {
-      "techStackImage": "/images/skillset/react.svg",
+      "techStackImage": "/portfolio/images/skillset/react.svg",
       "techStackName": "React",
       "description": [
         "React 컴포넌트 기반 개발에 능숙하며, 최적화된 컴포넌트 단위로 애플리케이션을 구성할 수 있습니다.",
@@ -13,7 +13,7 @@
       ]
     },
     {
-      "techStackImage": "/images/skillset/javascript.svg",
+      "techStackImage": "/portfolio/images/skillset/javascript.svg",
       "techStackName": "JavaScript",
       "description": [
         "적절한 이벤트 핸들러로 DOM을 제어할 수 있습니다.",
@@ -24,14 +24,14 @@
       ]
     },
     {
-      "techStackImage": "/images/skillset/typescript.svg",
+      "techStackImage": "/portfolio/images/skillset/typescript.svg",
       "techStackName": "TypeScript",
       "description": [
         "엄격한 타입 관리로 버그가 적은 소스 코드 작성을 할 수 있습니다."
       ]
     },
     {
-      "techStackImage": "/images/skillset/styledcomponents.svg",
+      "techStackImage": "/portfolio/images/skillset/styledcomponents.svg",
       "techStackName": "styled-components",
       "description": [
         "CSS-in-JS로 컴포넌트를 개발하는 것에 장애물이 없습니다.",
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "techStackImage": "/images/skillset/tailwindcss.svg",
+      "techStackImage": "/portfolio/images/skillset/tailwindcss.svg",
       "techStackName": "Tailwind CSS",
       "description": [
         "base, components, utilities layer를 활용한 컴포넌트 개발에 익숙합니다.",
