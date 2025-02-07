@@ -50,20 +50,20 @@ const History = () => {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex gap-2"
+                  className="flex gap-2 text-xl lg:text-2xl "
                 >
                   {company}
                 </a>
-                <span className="text-xs font-thin text-[#717171] opacity-60">
+                <span className="text-base pl-2 font-thin text-[#717171] opacity-60">
                   {period}
                 </span>
               </h3>
               <div className="flex flex-col gap-8 lg:flex-1 lg:gap-8 w-full">
                 {description && (
                   <div className="flex flex-col gap-2">
-                    <h4>설명</h4>
+                    <h4 className="text-xl lg:text-2xl">설명</h4>
                     <span
-                      className="relative block pl-3 before:content-[''] before:block before:w-1 before:h-px before:absolute before:top-3 before:left-1 before:bg-[#000]"
+                      className="relative block font-omyu text-xl lg:text-2xl pl-3 lg:pl-6 before:content-[''] before:block before:w-1 lg:before:w-3 before:h-px before:absolute before:top-3 before:left-1 before:bg-[#000]"
                       tabIndex={0}
                     >
                       {description}
@@ -73,12 +73,14 @@ const History = () => {
 
                 {workSummary && (
                   <div className="flex flex-col gap-2">
-                    <h4 tabIndex={0}>주요 프로젝트</h4>
+                    <h4 className="text-xl lg:text-2xl" tabIndex={0}>
+                      주요 프로젝트
+                    </h4>
                     <ul className="flex flex-col">
                       {workSummary?.map((item, index) => (
                         <li
                           key={index}
-                          className="relative pl-3 before:content-[''] before:block before:w-1 before:h-px before:absolute before:top-3 before:left-1 before:bg-[#000]"
+                          className="relative font-omyu text-xl lg:text-2xl pl-3 lg:pl-6 before:content-[''] before:block before:w-1 lg:before:w-3 before:h-px before:absolute before:top-3 before:left-1 before:bg-[#000]"
                           tabIndex={0}
                         >
                           {item}
@@ -90,9 +92,11 @@ const History = () => {
 
                 {techStackSummary && (
                   <div className="flex flex-col gap-2">
-                    <h4 tabIndex={0}>기술 스택</h4>
+                    <h4 className="text-xl lg:text-2xl" tabIndex={0}>
+                      기술 스택
+                    </h4>
                     <span
-                      className="relative block pl-3 before:content-[''] before:block before:w-1 before:h-px before:absolute before:top-3 before:left-1 before:bg-[#000]"
+                      className="relative block font-omyu text-xl lg:text-2xl pl-3 lg:pl-6 before:content-[''] before:block before:w-1 lg:before:w-3 before:h-px before:absolute before:top-3 before:left-1 before:bg-[#000]"
                       tabIndex={0}
                     >
                       {techStackSummary}

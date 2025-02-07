@@ -8,7 +8,7 @@ const Home = ({ scrollToDown }) => {
       // style={{ border: "solid 2px crimson" }}
     >
       <h2
-        className="relative z-20 font-omyu text-4xl lg:text-7xl text-right font-black leading-snug -top-20 pr-4"
+        className="relative z-20 font-omyu text-4xl lg:text-4xl text-right font-black leading-snug -top-20 pr-4"
         tabIndex={0}
       >
         사용자의 편의에 맞춘 <br className="block lg:hidden" /> 프로그램을
