@@ -1,0 +1,18 @@
+{
+  "result": [
+    {
+      "company": "(주)솔텍아이앤에스",
+      "logo": "images/portfolio/career/soltec_logo.png",
+      "url": "http://www.soltecins.co.kr/",
+      "period": "2024.03 - 2024.12",
+      "description": "RPA(Robotic Process Automation), 자동화 프로그램의 유지 보수 및 프로세스 최적화, 신규 개발 등을 진행했습니다.",
+      "workSummary": [
+        "세금계산서 송장 처리 자동화",
+        "SAP 오더 생성 자동화",
+        "교육 알림 자동화",
+        "특정 웹사이트 정보를 추출 후 입력 자동화"
+      ],
+      "techStackSummary": "Automation anywhere, SAP, JScript, VBScript"
+    }
+  ]
+}
