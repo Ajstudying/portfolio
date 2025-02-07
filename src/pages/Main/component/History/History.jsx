@@ -19,7 +19,7 @@ const History = () => {
 
   return (
     <section id="portfolio">
-      <h2 className="pb-20" tabIndex={0}>
+      <h2 className="pb-5 lg:pb-20" tabIndex={0}>
         History
       </h2>
       <ol className="flex flex-col gap-16">

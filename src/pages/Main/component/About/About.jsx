@@ -13,13 +13,13 @@ const About = ({ targetRef }) => {
       //  lg:pb-80 lg:mb-40
       className="lg:flex-col lg:mb-40 "
     >
-      <div className="pb-10">
+      <div className="pb-5 lg:pb-10">
         <h2 className="relative basis-0 lg:basis-72 before:hidden lg:before:block before:content-[''] before:h-px before:absolute before:top-1/2 before:-translate-y-1/2 before:left-48 before:w-24 before:bg-grayscaleA/10">
           About
         </h2>
       </div>
       <div className="w-full h-full flex flex-col lg:flex-row lg:justify-between rounded-lg lg:p-8 ">
-        <article className="flex flex-col gap-5 lg:gap-20 w-4/5 p-4 lg:p-8">
+        <article className="flex flex-col gap-5 lg:gap-20 w-full lg:w-4/5 p-4 lg:p-8">
           <div className="about-div">
             <div className="flex flex-col w-20">
               <span className="flex justify-center">
@@ -59,7 +59,7 @@ const About = ({ targetRef }) => {
           </div>
         </article>
         <hr className="h-auto lg:m-8" style={{ border: "solid 1px gray" }} />
-        <article className="flex flex-col gap-5 w-4/5 p-4 lg:p-8">
+        <article className="flex flex-col gap-5 w-full lg:w-4/5 p-4 lg:p-8">
           <div className="about-div">
             <div className="flex flex-col w-20">
               <span className="flex justify-center">
@@ -76,7 +76,7 @@ const About = ({ targetRef }) => {
             </div>
           </div>
           <div className="flex justify-end">
-            <ul className="w-4/5 list-custom pl-5">
+            <ul className="w-full lg:w-4/5 list-custom pl-5 lg:pl-5">
               <li className="about-p">Java 프로그래밍과 데이터베이스</li>
               <li className="about-p">프레임워크 중심의 웹프로그래밍</li>
               <li className="about-p">

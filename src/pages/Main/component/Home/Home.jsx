@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Home = ({ scrollToDown }) => {
   return (
     <section
@@ -9,15 +11,16 @@ const Home = ({ scrollToDown }) => {
         className="relative z-20 font-omyu text-4xl lg:text-7xl text-right font-black leading-snug -top-20 pr-4"
         tabIndex={0}
       >
-        사용자의 편의에 맞춘 프로그램을 개발하는 개발자
+        사용자의 편의에 맞춘 <br className="block lg:hidden" /> 프로그램을
+        개발하는 개발자
       </h2>
       <div className="relative z-20 flex flex-col gap-4">
         <span
           className="text-base font-omyu text-xl lg:text-4xl period-mark small"
           tabIndex={0}
         >
-          사용자 친화적인 프로그램, 사용자가 요청하는 바를 구현할 수 있도록
-          공부하고 있는 개발자입니다
+          사용자 친화적인 프로그램, <br className="block lg:hidden" /> 사용자가
+          요청하는 바를 구현할 수 있도록 공부하고 있는 개발자입니다
         </span>
       </div>
       <button
