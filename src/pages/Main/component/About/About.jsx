@@ -4,12 +4,12 @@ import { ReactComponent as IconPhone } from "../../../../assets/svg/about/icon_p
 import { ReactComponent as IconThumb } from "../../../../assets/svg/about/icon_thumb.svg";
 import { ReactComponent as IconCertification } from "../../../../assets/svg/about/icon_certification.svg";
 import { ReactComponent as IconLightbulb } from "../../../../assets/svg/about/icon_lightbulb.svg";
+import { useEffect, useRef, useState } from "react";
 
 const About = ({ targetRef }) => {
   return (
     <section
       id="about"
-      ref={targetRef}
       //  lg:pb-80 lg:mb-40
       className="lg:flex-col lg:mb-40 "
     >

@@ -4,10 +4,36 @@ import { ReactComponent as IconPortfolio } from "../../../../assets/svg/contact/
 import { ReactComponent as IconGitbook } from "../../../../assets/svg/contact/icon_gitbook.svg";
 import { ReactComponent as IconCertification } from "../../../../assets/svg/contact/icon_certification.svg";
 import { ReactComponent as IconVelog } from "../../../../assets/svg/contact/icon_velog.svg";
+import { useEffect, useRef, useState } from "react";
 
 const Contact = () => {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        setIsVisible(entry.isIntersecting);
+      });
+    });
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
   return (
     <section
+      ref={ref}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transition: "all 1s",
+      }}
       id="contact"
       className="justify-start lg:flex-row lg:justify-between lg:items-center"
     >

@@ -17,7 +17,8 @@ const Header = ({ currentLocation }) => {
 
   useEffect(() => {
     const close = (e) => {
-      if (e.keyCode === 27) {
+      if (e.key === "Escape") {
+        // "Escape" 문자열을 사용
         setToggleHeader(false);
       }
     };
@@ -33,6 +34,7 @@ const Header = ({ currentLocation }) => {
     document.addEventListener("mousedown", handleOutside);
     return () => {
       document.removeEventListener("mousedown", handleOutside);
+      window.removeEventListener("keydown", close);
     };
   }, [toggleHeader]);
 

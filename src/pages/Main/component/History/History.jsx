@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { customAxios } from "../../../../API/API";
 
 const History = () => {
   const [portfolioData, setPortfolioData] = useState([]);
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   const getPortfolioData = async () => {
     try {
@@ -15,10 +17,34 @@ const History = () => {
 
   useEffect(() => {
     getPortfolioData();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        setIsVisible(entry.isIntersecting);
+      });
+    });
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
   }, []);
 
   return (
-    <section id="portfolio">
+    <section
+      ref={ref}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transition: "all 1s",
+      }}
+      id="portfolio"
+      className="lg:mt-80"
+    >
       <h2 className="pb-5 lg:pb-20" tabIndex={0}>
         History
       </h2>

@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { customAxios } from "../../../../API/API";
 
 const Skillset = () => {
   const [skillsetData, setSkillsetDataData] = useState([]);
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   const getSkillsetData = async () => {
     try {
@@ -15,10 +17,34 @@ const Skillset = () => {
 
   useEffect(() => {
     getSkillsetData();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        setIsVisible(entry.isIntersecting);
+      });
+    });
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
   }, []);
 
   return (
-    <section id="skillset" className="lg:mt-20">
+    <section
+      ref={ref}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transition: "all 1s",
+      }}
+      id="skillset"
+      className="lg:mt-20"
+    >
       <h2 tabIndex={0}>Skillset</h2>
       <ul>
         {skillsetData?.map(
