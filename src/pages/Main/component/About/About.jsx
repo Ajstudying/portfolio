@@ -11,9 +11,9 @@ const About = ({ targetRef }) => {
     <section
       id="about"
       //  lg:pb-80 lg:mb-40
-      className="lg:flex-col lg:mb-40 "
+      className="justify-evenly lg:flex-col lg:mb-40 "
     >
-      <div className="pb-5 lg:pb-10">
+      <div className="pb-0 lg:pb-10">
         <h2 className="relative basis-0 lg:basis-72 before:hidden lg:before:block before:content-[''] before:h-px before:absolute before:top-1/2 before:-translate-y-1/2 before:left-48 before:w-24 before:bg-grayscaleA/10">
           About
         </h2>
@@ -58,7 +58,10 @@ const About = ({ targetRef }) => {
             </p>
           </div>
         </article>
-        <hr className="h-auto lg:m-8" style={{ border: "solid 1px gray" }} />
+        <hr
+          className="h-auto lg:m-8 hidden lg:block"
+          style={{ border: "solid 1px gray" }}
+        />
         <article className="flex flex-col gap-5 w-full lg:w-4/5 p-4 lg:p-8">
           <div className="about-div">
             <div className="flex flex-col w-20">

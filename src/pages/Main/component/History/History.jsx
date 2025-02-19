@@ -43,9 +43,9 @@ const History = () => {
         transition: "all 1s",
       }}
       id="portfolio"
-      className="lg:mt-80"
+      className="justify-evenly lg:mt-80"
     >
-      <h2 className="pb-5 lg:pb-20" tabIndex={0}>
+      <h2 className="" tabIndex={0}>
         History
       </h2>
       <ol className="flex flex-col gap-16">
@@ -64,7 +64,7 @@ const History = () => {
           ) => (
             <li
               key={index}
-              className="flex gap-8 py-2 first:pt-8 flex-col lg:flex-row lg:gap-0"
+              className="flex gap-8 py-2 first:pt-0 flex-col lg:flex-row lg:gap-0"
             >
               <img
                 src={logo}
