@@ -55,6 +55,8 @@ const About = ({ targetRef }) => {
               SQL 개발자
               <br />
               Advanced certification of Automation anywhere
+              <br />
+              네트워크관리사 2급
             </p>
           </div>
         </article>
